@@ -6,17 +6,13 @@
       "use": "@vercel/next"
     }
   ],
-  "framework": "nextjs",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://work-papa.onrender.com/$1"
+    }
+  ],
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1"
-  },
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "installCommand": "npm install",
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://work-papa.onrender.com/:path*"
-    }
-  ]
+  }
 }
