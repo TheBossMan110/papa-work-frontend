@@ -12,6 +12,5 @@
       "source": "/api/:path*",
       "destination": "https://work-papa.onrender.com/:path*"
     }
-  ],
-  "regions": ["iad1"] 
+  ]
 }
