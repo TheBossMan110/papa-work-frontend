@@ -1,22 +1,17 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "next.config.mjs",
-      "use": "@vercel/next"
-    }
-  ],
   "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1"
   },
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://work-papa.onrender.com"
+      "destination": "https://work-papa.onrender.com/:path*"
     }
-  ]
+  ],
+  "regions": ["iad1"] 
 }
